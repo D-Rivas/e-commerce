@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "navbar navbar"
+    "aside product" 
+    "footer footer";
+    grid-template-columns: 250px, 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+
+.navbar {
+    grid-area: navbar;
+    background: #34495e;
+    color: #ecf5f5;
+    text-align: center;
+    padding: 10px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #ecf0f1;
+    padding: 20px;
+    
+}
+
+.aside ul {
+    list-style: none;
+    padding: 5px;
+    color: #596169;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside h2 {
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #41607e;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background: #ecf0f1;
+    align-items: start;
+    justify-content: center;
+    padding: 18px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    text-align:center;
+    background: white;
+    width: 270px;
+    height: auto;
+    box-shadow: 0 2px 5px rgb(0, 0, 0,1);
+    overflow: hidden;
+    position: relative;
+
+}
+
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+
+.product h3 {
+    font-size: 16px;
+    margin:10px 0;
+}
+
+.product p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px;
+}
+
+.product button {
+    background: rgb(38, 38, 116);
+    color: #ecf0f1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.product button:hover {
+    background: darkblue;
+}
+
+.footer {
+    grid-area: footer;
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+}
